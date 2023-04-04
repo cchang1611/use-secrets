@@ -12,7 +12,7 @@ jobs:
       - name: Grading results
         uses: githubtraining/looking-glass-action@v0.1.0
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
+          github-token: ${{secrets.ACTION_SECRET_CCH}}
           feedback: ${{ toJSON(github.event.client_payload) }}
   troubleshoot-activity:
     if: github.event_name == 'workflow_dispatch'
